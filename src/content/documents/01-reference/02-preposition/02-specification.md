@@ -1,5 +1,5 @@
 ---
-title: match
+title: specification
 ---
 
 Used within a template function to specify the shape of the target facts.
@@ -17,6 +17,49 @@ static match<T>(
 ## Returns
 
 * A specification that can be used by [`query`](../query/) or [`watch`](../watch/)
+
+## Syntax
+
+```pikchr
+//========== COMMON SETUP ===============
+
+scale = 1.0
+$r = 0.2in
+linerad = 0.75*$r  //rouding of lines
+linewid = 0.15  //length of lines
+Z:box invisible
+
+//========== Specification====================
+
+move down 100%
+move left until even with Z.w
+right
+
+circle wid 10%
+arrow right 200%
+oval "j.match" fit
+arrow
+oval "(" fit
+arrow
+box "template" italic fit
+arrow
+A:oval ")" fit
+
+arrow 300%
+arrow left 200% then down 75% then right 200% <-
+
+box "predicate" bold italic fit fill 0xfb8072
+
+arrow right 200%  then up 75% then left <-
+arrow right 300%
+B:circle wid 10%
+
+line from A.e to B.w
+```
+
+See [predicate](../predicate/)
+
+[Full diagram](../)
 
 ## Examples
 

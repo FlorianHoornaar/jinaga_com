@@ -14,11 +14,49 @@ query<T, U>(
 ## Parameters
 
 * **start** - A fact from which to begin the query
-* **preposition** - A template function passed into [`j.for`](../for/)
+* **preposition** - A [preposition](../../preposition/) describing the facts to match
 
 ## Returns
 
 * A promise that resolves to an array of results
+
+## Syntax
+
+```pikchr
+//========== COMMON SETUP ===============
+
+scale = 1.0
+$r = 0.2in
+linerad = 0.75*$r  //rouding of lines
+linewid = 0.15  //length of lines
+Z:box invisible
+
+//========== Query ====================
+
+move down 125%
+move left until even with Z.w
+right
+
+circle wid 10%
+arrow right 200%
+oval "j.query" fit
+arrow
+oval "(" fit
+arrow
+box "starterFact" italic fit
+arrow
+oval "," fit
+arrow
+box "preposition" bold italic fit fill 0x8dd3c7
+arrow
+oval ")" fit
+arrow 200%
+circle wid 10%
+```
+
+See [preposition](../../preposition/)
+
+[Full diagram](../../preposition/syntax-diagram/)
 
 ## Examples
 
